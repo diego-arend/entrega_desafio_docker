@@ -27,8 +27,10 @@ services:
       - net
     ports:
       - "4000:3000"
+    # Copia o conteúdo do volume local para o container e cria um volume anonimo para expor os módulos do node e rodar a aplicação
     volumes:
       - ./node:/usr/src/app
+      - /usr/src/app/node_modules
     tty: true
     depends_on:
       - db
