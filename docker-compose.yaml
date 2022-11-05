@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     image: diegofarend/node
     container_name: app
-    entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 40s docker-entrypoint.sh
     command: 'node index.js'
     networks:
       - net
